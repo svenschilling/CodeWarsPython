@@ -14,12 +14,15 @@ string = "how can mirrors be real if our eyes aren't real"
 def to_jaden_case(string):
     sentence = ""
     s = string.split()
-    
     for x in s:
         cap = x.capitalize()
         sentence += cap + " "
         pass
-    return sentence
+    
+    # delete last space
+    newSen = sentence[:-1]
+    
+    return newSen
 
 to_jaden_case(string)
 
