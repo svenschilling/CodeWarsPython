@@ -25,11 +25,11 @@ def DNA_strand(dna):
     for index in dna:
         if index == 'A':
             dnaStrand += 'T'
-        if index == 'T':
+        elif index == 'T':
             dnaStrand += 'A'
-        if index == 'C':
+        elif index == 'C':
             dnaStrand += 'G'
-        if index == 'G':
+        elif index == 'G':
             dnaStrand += 'C'
     
     return dnaStrand
