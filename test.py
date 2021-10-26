@@ -1,18 +1,31 @@
 import string
+import unittest
 
-bla = "gergh    terter    tert    zezer               gdfcf"
+s1 = "xyaabbbccccdefww"
+s2 = "xxxxyyyyabklmopq"
 
-new_string = bla[:-1]
-print(new_string)
-print(string.capwords(bla))
+def longest(s1, s2):
+    # make it a list, sort it and convert it to set to exclude doubles
+    s1 = list(s1)
+    s1.sort()
+    set1 = s1
+    set1 = set(set1)
+    s1 = set1
 
-strng ="fsdrmne32"
-for x in strng:
-    if x.isdigit():
-        print(x + " digit found")
-        if int(x) == 3:
-            print("drei gefunden")
-    else:
-        print(x + " is a char")
-    pass
+    s2 = list(s2)
+    s2.sort()
+    set2 = s2
+    set2 = set(set2)
+    s2 = set2
     
+    if s1 > s2:  
+        return s1
+    else:
+        return s2
+
+print(longest(s1,s2))
+
+
+class myTest(unittest.TestCase):
+    def test(self):
+        self.assertEquals(longest("aretheyhere", "yestheyarehere"), "aehrsty")
