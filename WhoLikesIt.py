@@ -10,14 +10,25 @@ Implement the function which takes an array containing the names of people that 
 ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 """
 names = ["Alex", "Jacob", "Mark", "Max"]
+names1 = ["Peter"]
+names2 = ["Jacob", "Alex"]
+names3 = ["Max", "John", "Mark"]
+none = ""
 
 def likes(names):
-    msg = ""
-    numberLikes = 0
-    likeMsg = "like this"
-    if numberLikes > 2:
-        
-
+    
+    if len(names) <= 3:
+        if len(names) == 0:
+            print("no one likes this")
+        elif len(names) == 1:
+            print(f"{names[0]} likes this")
+        elif len(names) == 2:
+            print(f"{names[0]} and {names[1]} like this")            
+        else:
+            print(f"{names[0]}, {names[1]} and {names[2]} like this")
     else:
+        print(f"{names[0]}, {names[1]} and {len(names)-2} others like this")
 
-    return msg
+
+
+likes(names)
