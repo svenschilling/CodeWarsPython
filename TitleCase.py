@@ -19,4 +19,12 @@ title_case('the quick brown fox') # should return: 'The Quick Brown Fox'
 import string
 
 title = "THE WIND IN THE WILLOWS"
-exceptionList = "a of in the"
+exceptionList = ["a", "the", "of", "in", "with", "an"]
+
+def title_case(title):
+    newTitle = ""
+
+    return newTitle
+
+
+title_case()
